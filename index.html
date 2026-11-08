@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Story For Rukuuu Jiii ❤️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #ffe6eb 0%, #ffb6c1 100%);
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    /* Floating Hearts Animation */
+    .heart {
+      position: fixed;
+      top: -10vh;
+      color: rgba(255, 105, 180, 0.6);
+      font-size: 20px;
+      animation: fall 5s linear infinite;
+      user-select: none;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Card Wrapper */
+    .card-container {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-radius: 30px;
+      padding: 40px 30px;
+      box-shadow: 0 20px 40px rgba(255, 105, 180, 0.25);
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+    }
+
+    /* Page Navigation */
+    .page {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .page.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Stage 1: Welcome */
+    .envelope-icon {
+      font-size: 75px;
+      margin-bottom: 20px;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    h1.title {
+      color: #d63384;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    p.subtitle {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    /* Stage 2: Promises */
+    .promises-grid {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0 25px 0;
+    }
+
+    .promise-item {
+      background: #fff0f5;
+      border: 1.5px dashed #ff69b4;
+      border-radius: 15px;
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 15px;
+      color: #444;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 14px 38px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255, 65, 108, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(255, 65, 108, 0.5);
+    }
+
+    .proposal-box {
+      margin-top: 15px;
+      position: relative;
+      width: 100%;
+      min-height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-yes {
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(56, 239, 125, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .btn-yes:hover {
+      transform: scale(1.1);
+    }
+
+    .btn-no {
+      background: #e9ecef;
+      color: #6c757d;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      position: absolute;
+      transition: all 0.15s ease-out;
+    }
+
+    /* Stage 3: Celebration */
+    .celebrate-emoji {
+      font-size: 85px;
+      margin-bottom: 20px;
+      animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.15); }
+    }
+
+    .celebration-title {
+      color: #ff416c;
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .celebration-text {
+      color: #333;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Single File Jekyll Bypass Config -->
+  <!-- This empty block stops GitHub Pages build errors -->
+
+  <div class="card-container">
+
+    <!-- PAGE 1: Welcome -->
+    <div class="page active" id="page1">
+      <div class="envelope-icon">💌✨</div>
+      <h1 class="title">Hello my Rukuuu Jiii!</h1>
+      <p class="subtitle">
+        I love you soo much! Mwah mwah mwah! 💋<br><br>
+        I created something special just for you. Are you ready to open your story?
+      </p>
+      <button class="btn-primary" onclick="goToPage(2)">Open My Story ❤️</button>
+    </div>
+
+    <!-- PAGE 2: Promises & Proposal -->
+    <div class="page" id="page2">
+      <h1 class="title">My Forever Promises 📜💖</h1>
+      
+      <div class="promises-grid">
+        <div class="promise-item">
+          <span>✨</span> I promise to always cherish every moment with you.
+        </div>
+        <div class="promise-item">
+          <span>👑</span> I promise to treat you like my queen forever.
+        </div>
+        <div class="promise-item">
+          <span>🐒</span> I promise to stay your sweetest Bandar for life!
+        </div>
+      </div>
+
+      <h2 style="color: #ff4b2b; margin: 15px 0; font-size: 22px;">
+        Will you marry your Bandar in the future? 💍
+      </h2>
+
+      <div class="proposal-box" id="proposalBox">
+        <button class="btn-yes" onclick="goToPage(3)">YES! 💖</button>
+        <button class="btn-no" id="noBtn" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()">No 😜</button>
+      </div>
+    </div>
+
+    <!-- PAGE 3: Final Celebration -->
+    <div class="page" id="page3">
+      <div class="celebrate-emoji">💍🐒🎉</div>
+      <h1 class="celebration-title">YAAAAAY! 🎉</h1>
+      <p class="celebration-text">
+        You made your Bandar the happiest person in the universe! ❤️<br><br>
+        Forever and always, my Rukuuu jiii! 🥰✨
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    // Page switcher
+    function goToPage(pageNumber) {
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.getElementById('page' + pageNumber).classList.add('active');
+
+      if (pageNumber === 3) {
+        triggerHeartBurst();
+      }
+    }
+
+    // Runaway No Button logic
+    function dodgeNoButton() {
+      const noBtn = document.getElementById('noBtn');
+      const box = document.getElementById('proposalBox');
+      
+      const maxX = (box.clientWidth / 2) - 50;
+      const maxY = 100;
+
+      const randomX = (Math.random() - 0.5) * maxX * 2;
+      const randomY = (Math.random() - 0.5) * maxY * 2;
+
+      noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    // Continuous floating heart background
+    function spawnHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = ['❤️', '💖', '💕', '✨'][Math.floor(Math.random() * 4)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(spawnHeart, 350);
+
+    // Heart explosion effect on YES
+    function triggerHeartBurst() {
+      for (let i = 0; i < 50; i++) {
+        setTimeout(spawnHeart, i * 30);
+      }
+    }
+  </script>
+</body>
+</html>
